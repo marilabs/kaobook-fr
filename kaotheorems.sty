@@ -12,19 +12,42 @@
 
 \DeclareBoolOption{framed}% If true, put theorems into colorful boxes, otherwise write them like normal text
 
+
+% COLOURS
+
+\definecolor{aliceblue}{rgb}{0.94, 0.97, 1.0}
+\definecolor{almond}{rgb}{0.94, 0.87, 0.8}
+\definecolor{azure(web)(azuremist)}{rgb}{0.94, 1.0, 1.0}
+\definecolor{bisque}{rgb}{1.0, 0.89, 0.77}
+\definecolor{champagne}{rgb}{0.97, 0.91, 0.81}
+\definecolor{lavender(web)}{rgb}{0.9, 0.9, 0.98}
+\definecolor{honeydew}{rgb}{0.94, 1.0, 0.94}
+\definecolor{mistyrose}{rgb}{1.0, 0.89, 0.88}
+\definecolor{magnolia}{rgb}{0.97, 0.96, 1.0}
+
 % Define the options to finely tune the background color of each element.
 % If only the 'background' option is specified, all types of theorem will have that background. If more specific options are set, the previous option will be overwritten.
-\newcommand{\kaotheorems@defaultbg}{Goldenrod!45!white}
-\DeclareStringOption[\kaotheorems@defaultbg]{background}
-\DeclareStringOption[\kaotheorems@defaultbg]{theorembackground}
-\DeclareStringOption[\kaotheorems@defaultbg]{propositionbackground}
-\DeclareStringOption[\kaotheorems@defaultbg]{lemmabackground}
-\DeclareStringOption[\kaotheorems@defaultbg]{corollarybackground}
-\DeclareStringOption[\kaotheorems@defaultbg]{definitionbackground}
-\DeclareStringOption[\kaotheorems@defaultbg]{assumptionbackground}
-\DeclareStringOption[\kaotheorems@defaultbg]{remarkbackground}
-\DeclareStringOption[\kaotheorems@defaultbg]{examplebackground}
-\DeclareStringOption[\kaotheorems@defaultbg]{exercisebackground}
+\newcommand{\kaotheorems@bg}{magnolia}
+\newcommand{\kaotheorems@thbg}{magnolia}
+\newcommand{\kaotheorems@propbg}{magnolia}
+\newcommand{\kaotheorems@lembg}{magnolia}
+\newcommand{\kaotheorems@corbg}{magnolia}
+\newcommand{\kaotheorems@defbg}{magnolia}
+\newcommand{\kaotheorems@assubg}{magnolia}
+\newcommand{\kaotheorems@rembg}{magnolia}
+\newcommand{\kaotheorems@exabg}{magnolia}
+\newcommand{\kaotheorems@exobg}{magnolia}
+
+\DeclareStringOption[\kaotheorems@bg]{background}
+\DeclareStringOption[\kaotheorems@thbg]{theorembackground}
+\DeclareStringOption[\kaotheorems@propbg]{propositionbackground}
+\DeclareStringOption[\kaotheorems@lembg]{lemmabackground}
+\DeclareStringOption[\kaotheorems@corbg]{corollarybackground}
+\DeclareStringOption[\kaotheorems@defbg]{definitionbackground}
+\DeclareStringOption[\kaotheorems@assubg]{assumptionbackground}
+\DeclareStringOption[\kaotheorems@rembg]{remarkbackground}
+\DeclareStringOption[\kaotheorems@exabg]{examplebackground}
+\DeclareStringOption[\kaotheorems@exobg]{exercisebackground}
 
 \ProcessKeyvalOptions{kaotheorems} % Process the options
 

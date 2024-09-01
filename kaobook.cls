@@ -280,3 +280,21 @@
 
 \counterwithin*{sidenote}{chapter} % Uncomment to reset the sidenote counter at each chapter
 %\counterwithout{sidenote}{chapter} % Uncomment to have one sidenote counter for the whole document
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGE
+%----------------------------------------------------------------------------------------
+
+\DeclareOption{english}{\def\documentlanguage{english}}
+\DeclareOption{french}{\def\documentlanguage{french}}
+\ExecuteOptions{english} % Default to English if no option is specified
+\ProcessOptions\relax
+
+% Load the babel package with the selected language
+\ifx\documentlanguage\undefined
+  \def\documentlanguage{english}
+\fi
+\RequirePackage[\documentlanguage]{babel}
+
+\newcommand{\english}[1]{\iflanguage{english}{#1}{}}
+\newcommand{\french}[1]{\iflanguage{french}{#1}{}}
